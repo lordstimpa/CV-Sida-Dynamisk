@@ -118,9 +118,48 @@ async function getData() {
 
     for (let item in data.Merits) {
       let meritH3 = document.createElement("h3");
+      meritH3.setAttribute("id", "merit" + item);
       meritH3.innerHTML = data.Merits[item].Merit;
       meritsDiv.appendChild(meritH3);
     }
+
+    let meritDateCert = document.createElement("h4");
+    document.getElementById("merit0").after(meritDateCert);
+    meritDateCert.innerHTML =
+      "Issued " +
+      data.Merits[0].Date.Month +
+      " " +
+      data.Merits[0].Date.Year +
+      "<br> Credential ID: " +
+      data.Merits[0].CredentialId;
+
+    let meritDateDrive = document.createElement("h4");
+    document.getElementById("merit1").after(meritDateDrive);
+    meritDateDrive.innerHTML =
+      "Issued " +
+      data.Merits[1].Date.Month +
+      " " +
+      data.Merits[1].Date.Year +
+      "<br>Type: " +
+      data.Merits[1].Type;
+
+    let meritProgUl = document.createElement("ul");
+    document.getElementById("merit2").after(meritProgUl);
+
+    for (let i = 0; i < data.Merits[2].Programs.length; i++) {
+      let meritProgLi = document.createElement("li");
+      meritProgLi.innerHTML = data.Merits[2].Programs[i];
+      meritProgUl.appendChild(meritProgLi);
+    }
+
+    let meritDateMed = document.createElement("h4");
+    document.getElementById("merit3").after(meritDateMed);
+    meritDateMed.innerHTML =
+      "Issued: " +
+      data.Merits[3].Date.Start.Year +
+      " - " +
+      data.Merits[3].Date.End.Year;
+
     console.log("async function");
   } else {
     console.log("HTTP-Error: " + response.status);

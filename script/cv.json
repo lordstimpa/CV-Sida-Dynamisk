@@ -136,9 +136,10 @@
   "Merits": [
     {
       "Merit": "Cambridge Advance English Certificate",
+      "CredentialId": "500/2598/3",
       "Date": {
         "Year": 2019,
-        "Month": "May"
+        "Month": "April"
       }
     },
     {
@@ -153,8 +154,8 @@
       "Merit": "Video / Photo Editing",
       "Programs": [
         "Sony Vegas",
-        "Adobe After Effects",
         "Cinema 4D",
+        "Adobe After Effects",
         "Adobe Photoshop",
         "Adobe Illustrator"
       ]
