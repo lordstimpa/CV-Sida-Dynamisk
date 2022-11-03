@@ -1,0 +1,174 @@
+{
+  "titleOne": "Education",
+  "Education": [
+    {
+      "EducationalLevel": "Higher Vocational Education",
+      "FieldOfStudy": "Data / IT",
+      "Specialization": "Fullstack Developer .NET",
+      "School": "Chas Academy",
+      "Courses": [
+        "IT Tech & Operations",
+        "Web technology",
+        "Backend development & databases",
+        "Degree project",
+        "Frontend development & UX",
+        "LIA - Learning at work",
+        "Programmingmethodology & testing",
+        "Projectmethodology & agile methods",
+        "Programming with C# & .Net"
+      ],
+      "Location": {
+        "City": "Stockholm",
+        "County": "Stockholm",
+        "Country": "Sweden"
+      },
+      "Date": {
+        "Start": {
+          "Year": 2022,
+          "Month": "September"
+        },
+        "End": {
+          "Year": 2024,
+          "Month": "June"
+        }
+      }
+    },
+    {
+      "EducationalLevel": "High School",
+      "FieldOfStudy": "Social science",
+      "Specialization": "Behavioral science",
+      "School": "VBU Högbergsskolan",
+      "Location": {
+        "City": "Ludvika",
+        "County": "Dalarna",
+        "Country": "Sweden"
+      },
+      "Date": {
+        "Start": {
+          "Year": 2017,
+          "Month": "August"
+        },
+        "End": {
+          "Year": 2019,
+          "Month": "June"
+        }
+      }
+    }
+  ],
+  "titleTwo": "Work experience",
+  "WorkExperience": [
+    {
+      "FieldOfWork": "E-commerce / IT",
+      "Company": "Niotek IT AB",
+      "Location": {
+        "City": "Smedjebacken",
+        "County": "Dalarna",
+        "Country": "Sweden"
+      },
+      "Date": {
+        "Start": {
+          "Year": 2020,
+          "Month": "October"
+        },
+        "End": {
+          "Year": 2021,
+          "Month": "December"
+        }
+      },
+      "Responsibilities": [
+        "Use of Sello, which is a trade management platform. Sello is one of the most important tools used to successfully complete my work tasks.",
+        "Tasks such as orders, inventory, freight handling and sales are all examples of what is carried out with the help of Sello.",
+        "Purchases of used and new products are purchased from companies and private individuals. \nThe products are examined to be able to determine the condition and any defects that may be present. The products purchased include video games, game consoles and accessories. \nComputers and other computer components also enter the picture, albeit in smaller capacities.",
+        "Troubleshooting, repair and installation are carried out at a simpler level on computers and other electronic products.",
+        "Packing and dispatch of goods to customers. Expand inventory through categorization, sorting and numbering."
+      ]
+    },
+    {
+      "FieldOfWork": "Healthcare",
+      "Company": "Ludvika Staffing Unit",
+      "Location": {
+        "City": "Ludvika",
+        "County": "Dalarna",
+        "Country": "Sweden"
+      },
+      "Date": {
+        "Start": {
+          "Year": 2018,
+          "Month": "April"
+        },
+        "End": {
+          "Year": 2019,
+          "Month": "August"
+        }
+      },
+      "Responsibilities": [
+        "Help and support the residents with everything to improve their quality of life",
+        "Cooking and shopping for each week",
+        "Handling of medicines"
+      ]
+    },
+    {
+      "FieldOfWork": "Fitter",
+      "Company": "Trumslagarna AB",
+      "Location": {
+        "City": "Nacka",
+        "County": "Stockholm",
+        "Country": "Sweden"
+      },
+      "Date": {
+        "Start": {
+          "Year": 2016,
+          "Month": "July"
+        },
+        "End": {
+          "Year": 2016,
+          "Month": "August"
+        }
+      },
+      "Responsibilities": [
+        "Assembly and disassembly of ventilation frames",
+        "Use of sheet metal scissors and machine cutting",
+        "Carefully examine purchase orders and complete them to the smallest detail"
+      ]
+    }
+  ],
+  "titleThree": "Merits",
+  "Merits": [
+    {
+      "Merit": "Cambridge Advance English Certificate",
+      "Date": {
+        "Year": 2019,
+        "Month": "May"
+      }
+    },
+    {
+      "Merit": "Drivers License",
+      "Type": "B",
+      "Date": {
+        "Year": 2017,
+        "Month": "August"
+      }
+    },
+    {
+      "Merit": "Video / Photo Editing",
+      "Programs": [
+        "Sony Vegas",
+        "Adobe After Effects",
+        "Cinema 4D",
+        "Adobe Photoshop",
+        "Adobe Illustrator"
+      ]
+    },
+    {
+      "Merit": "Delegation of Medication administration",
+      "Date": {
+        "Start": {
+          "Year": 2018
+        },
+        "End": {
+          "Year": 2019
+        }
+      }
+    }
+  ]
+}

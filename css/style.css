@@ -1,0 +1,258 @@
+/*===============GLOBAL===============*/
+
+body {
+  font-family: "Open Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif;
+  font-size: 1em;
+  margin: auto;
+}
+
+.header,
+.headerb,
+nav,
+.wrap {
+  margin: auto;
+}
+
+/*===============Header===============*/
+
+header {
+  padding: 75px 0 30px 50px;
+  background: url("../img/mountains.png") no-repeat top;
+
+  text-align: left;
+  color: white;
+  font-family: "Quicksand", Calibri, "Gill Sans", sans-serif;
+}
+
+.header {
+  font-size: 5em;
+  font-weight: 300;
+}
+
+.headerb {
+  font-size: 1.5em;
+}
+
+.header::first-letter {
+  font-weight: 900;
+}
+
+/*===============Navigation===============*/
+
+nav {
+  background-color: black;
+  font-family: "Bebas Neue", Calibri, "Gill Sans", sans-serif;
+}
+
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  list-style: none;
+  text-align: center;
+  font-size: 1.5em;
+  padding: 0 0 0 50px;
+}
+
+.menu {
+  padding: 1%;
+  min-width: 15%;
+}
+
+header a:link,
+header a:visited,
+.menu a:link,
+.menu a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+.menu a:active {
+  color: black;
+  text-shadow: 0 0 0.5em white;
+}
+
+.menu a:hover {
+  text-shadow: 0 0 0.5em white;
+}
+
+.menu a[aria-current="page"] {
+  text-decoration: underline;
+  text-shadow: 0 0 0.5em white;
+}
+
+/*===============Main===============*/
+
+.wrap-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.wrap-resume {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.wrap-portfolio {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5%;
+}
+
+.section-resume {
+  padding: 2.5%;
+  border-bottom: solid 5px black;
+}
+
+.section-resume:nth-of-type(5),
+.section-resume:nth-of-type(6) {
+  border-bottom: none;
+}
+
+section {
+  width: 45%;
+  padding: 5% 0 5% 0;
+}
+
+.steven {
+  max-width: 100%;
+  width: 60%;
+  height: 60%;
+  box-shadow: 25px 25px 50px black;
+}
+
+.website {
+  max-width: 100%;
+  box-shadow: 25px 25px 50px black;
+}
+
+.wrap-img {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.vector-img {
+  max-width: 125%;
+}
+/*===============Modal===============*/
+
+.read-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.read-more a {
+  text-decoration: none;
+  background-color: black;
+  padding: 15px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  color: white;
+}
+
+#modal-first,
+#modal-second,
+#modal-third,
+#modal-fourth {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  transition: all 0.5s;
+  visibility: hidden;
+  opacity: 0;
+}
+
+#modal-first:target,
+#modal-second:target,
+#modal-third:target,
+#modal-fourth:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal-content-1,
+.modal-content-2,
+.modal-content-3,
+.modal-content-4 {
+  position: relative;
+  background: #fff;
+  width: 500px;
+  max-width: 90%;
+  padding: 1em 2em;
+  border-radius: 4px;
+}
+
+.modalclose {
+  position: absolute;
+  top: 0;
+  right: 15px;
+  color: rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  font-size: 2.5em;
+}
+
+/*===============Footer===============*/
+
+footer {
+  display: flex;
+  flex: wrap;
+  justify-content: space-evenly;
+  padding: 50px 50px 50px 0;
+  background-color: black;
+  color: white;
+  bottom: 0;
+}
+
+/*===============Media===============*/
+
+@media (max-width: 600px) {
+  .menu {
+    flex: 0 0 90%;
+    min-height: 20%;
+  }
+
+  .header {
+    font-size: 2.5em;
+    font-weight: 300;
+    padding: 20%;
+  }
+
+  .headerb {
+    font-size: 1.25em;
+  }
+
+  header {
+    text-align: center;
+    align-items: center;
+  }
+
+  footer {
+    flex-direction: column-reverse;
+    padding-left: 20%;
+  }
+}
+
+@media (max-width: 900px) {
+  section {
+    flex: 0 0 90%;
+  }
+  .section-resume:nth-of-type(1),
+  .section-resume:nth-of-type(3) {
+    border-bottom: none;
+  }
+}
