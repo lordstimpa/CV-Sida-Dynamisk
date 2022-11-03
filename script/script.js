@@ -8,9 +8,38 @@ async function getData() {
 
     console.log(data);
 
+    // create a total of 6 sections
+    // 3 sections for all data containing under the 3 headers
+    let sectionContainer = document.querySelector(".wrap-resume");
+
+    for (let i = 0; i < 6; i++) {
+      let section = document.createElement("section");
+      section.setAttribute("id", "section" + i);
+      sectionContainer.appendChild(section);
+    }
+
+    // 3 sections for img
+    let img0 = document.createElement("img");
+    img0.setAttribute("id", "img0");
+    img0.src = "/img/hatt.png";
+    let src = document.getElementById("section0");
+    src.appendChild(img0);
+
+    let img1 = document.createElement("img");
+    img1.setAttribute("id", "img1");
+    img1.src = "/img/bag.png";
+    let src1 = document.getElementById("section2");
+    src1.appendChild(img1);
+
+    let img2 = document.createElement("img");
+    img2.setAttribute("id", "img2");
+    img2.src = "/img/medal.png";
+    let src2 = document.getElementById("section4");
+    src2.appendChild(img2);
+
     // create the div container for ***EDUCATION**
     // and all the created elements and data it contains from JSON file
-    let eduContainer = document.getElementById("education");
+    let eduContainer = document.getElementById("section1");
     let eduDiv = document.createElement("div");
     eduContainer.appendChild(eduDiv);
 
@@ -52,7 +81,7 @@ async function getData() {
 
     // create the div container for ***WORK***
     // and all the created elements and data it contains from JSON file
-    let workContainer = document.getElementById("work");
+    let workContainer = document.getElementById("section3");
     let workDiv = document.createElement("div");
     workContainer.appendChild(workDiv);
 
@@ -108,7 +137,7 @@ async function getData() {
 
     // create the div container for ***MERITS*** and all it contains
     // and all the created elements and data it contains from JSON file
-    let meritsContainer = document.getElementById("merits");
+    let meritsContainer = document.getElementById("section5");
     let meritsDiv = document.createElement("div");
     meritsContainer.appendChild(meritsDiv);
 
