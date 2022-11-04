@@ -19,7 +19,6 @@ nav,
 header {
   padding: 75px 0 30px 50px;
   background: url("../img/mountains.png") no-repeat top;
-
   text-align: left;
   color: white;
   font-family: "Quicksand", "Calibri", "Gill Sans", sans-serif;
@@ -92,12 +91,6 @@ header a:visited,
   min-height: 80vh;
 }
 
-.wrap-resume {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
 .wrap-portfolio {
   display: flex;
   justify-content: center;
@@ -105,16 +98,9 @@ header a:visited,
   gap: 5%;
 }
 
-#section0,
-#section1,
-#section2,
-#section3 {
-  border-bottom: solid 5px black;
-}
-#section0,
-#section2,
-#section4 {
-  max-width: 45%;
+.main-portfolio h2 {
+  font-size: 4ch;
+  font-family: "Quicksand", "Calibri", "Gill Sans", sans-serif;
 }
 
 section {
@@ -132,6 +118,33 @@ section {
 .website {
   max-width: 100%;
   box-shadow: 25px 25px 50px black;
+}
+
+.main-text h2 {
+  font-family: "Quicksand", "Calibri", "Gill Sans", sans-serif;
+  font-size: 4ch;
+  color: rgb(124, 124, 32);
+}
+
+/*===============Resumé===============*/
+
+.wrap-resume {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#section0,
+#section1,
+#section2,
+#section3 {
+  border-bottom: solid 5px black;
+}
+
+#section0,
+#section2,
+#section4 {
+  max-width: 45%;
 }
 
 .wrap-resume h2 {
@@ -183,6 +196,77 @@ section {
 #meritsDivAnim {
   display: none;
 }
+/*===============Contact===============*/
+
+.formContainer {
+  font-family: "Quicksand", "Calibri", "Gill Sans", sans-serif;
+  font-weight: 800;
+  border-radius: 3px;
+  padding: 0 5% 5% 5%;
+  display: flex;
+  flex-direction: column;
+}
+
+#fname,
+#email {
+  width: 200px;
+}
+
+#fname,
+#email,
+#msg {
+  border: 2px solid black;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  font-family: "Quicksand", "Calibri", "Gill Sans", sans-serif;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 1.6ch;
+  background-color: rgba(124, 124, 32, 0.25);
+}
+
+#msg {
+  resize: none;
+  height: 150px;
+}
+
+.formContainer label {
+  font-size: 2ch;
+}
+
+.formContainer h3 {
+  font-size: 4ch;
+  color: rgb(124, 124, 32);
+}
+
+#submitContact {
+  width: 100px;
+  padding: 5px 25px;
+  background-color: rgba(124, 124, 32, 0.25);
+  border-radius: 5px;
+  font-size: 1.8ch;
+  font-weight: bold;
+}
+
+#submitContact:hover {
+  background-color: rgb(124, 124, 32);
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+#submitContact:active {
+  color: white;
+}
+
+.mail {
+  max-width: 100%;
+  width: 75%;
+}
+
+.sectionMail {
+  width: 30%;
+}
+
 /*===============Modal===============*/
 
 .read-more {
@@ -286,6 +370,10 @@ footer {
     flex-direction: column-reverse;
     padding-left: 20%;
   }
+
+  .wrap-resume h2 {
+    font-size: 3.5ch;
+  }
 }
 
 @media (max-width: 900px) {
@@ -299,6 +387,9 @@ footer {
   #section0,
   #section2,
   #section4 {
-    max-width: 0;
+    display: none;
+  }
+  .mail {
+    display: none;
   }
 }
