@@ -44,8 +44,13 @@ async function getData() {
     eduContainer.appendChild(eduDiv);
 
     let eduH2 = document.createElement("h2");
+    eduH2.setAttribute("id", "educationH2");
     eduH2.innerHTML = data.titleOne;
     eduDiv.appendChild(eduH2);
+
+    let eduDivAnim = document.createElement("div");
+    eduDivAnim.setAttribute("id", "eduDivAnim");
+    eduDiv.appendChild(eduDivAnim);
 
     for (let item in data.Education) {
       let eduH3 = document.createElement("h3");
@@ -66,8 +71,8 @@ async function getData() {
         data.Education[item].Location.City +
         ", " +
         data.Education[item].Location.Country;
-      eduDiv.appendChild(eduH3);
-      eduDiv.appendChild(eduH4);
+      eduDivAnim.appendChild(eduH3);
+      eduDivAnim.appendChild(eduH4);
     }
 
     let eduUl = document.createElement("ul");
@@ -86,8 +91,13 @@ async function getData() {
     workContainer.appendChild(workDiv);
 
     let workH2 = document.createElement("h2");
+    workH2.setAttribute("id", "workH2");
     workH2.innerHTML = data.titleTwo;
     workDiv.appendChild(workH2);
+
+    let workDivAnim = document.createElement("div");
+    workDivAnim.setAttribute("id", "workDivAnim");
+    workDiv.appendChild(workDivAnim);
 
     for (let item in data.WorkExperience) {
       let workH3 = document.createElement("h3");
@@ -108,8 +118,8 @@ async function getData() {
         data.WorkExperience[item].Location.City +
         ", " +
         data.WorkExperience[item].Location.Country;
-      workDiv.appendChild(workH3);
-      workDiv.appendChild(workH4);
+      workDivAnim.appendChild(workH3);
+      workDivAnim.appendChild(workH4);
     }
 
     let workUl0 = document.createElement("ul");
@@ -135,21 +145,26 @@ async function getData() {
       workUl2.appendChild(workLi);
     }
 
-    // create the div container for ***MERITS*** and all it contains
+    // create the div container for ***MERITS***
     // and all the created elements and data it contains from JSON file
     let meritsContainer = document.getElementById("section5");
     let meritsDiv = document.createElement("div");
     meritsContainer.appendChild(meritsDiv);
 
     let meritsH2 = document.createElement("h2");
+    meritsH2.setAttribute("id", "meritsH2");
     meritsH2.innerHTML = data.titleThree;
     meritsDiv.appendChild(meritsH2);
+
+    let meritsDivAnim = document.createElement("div");
+    meritsDivAnim.setAttribute("id", "meritsDivAnim");
+    meritsDiv.appendChild(meritsDivAnim);
 
     for (let item in data.Merits) {
       let meritH3 = document.createElement("h3");
       meritH3.setAttribute("id", "merit" + item);
       meritH3.innerHTML = data.Merits[item].Merit;
-      meritsDiv.appendChild(meritH3);
+      meritsDivAnim.appendChild(meritH3);
     }
 
     let meritDateCert = document.createElement("h4");
@@ -189,6 +204,34 @@ async function getData() {
       " - " +
       data.Merits[3].Date.End.Year;
 
+    // ON-click function to make div that contains data
+    // appear when h2 is clicked.
+
+    let div1 = document.getElementById("eduDivAnim");
+    let div2 = document.getElementById("workDivAnim");
+    let div3 = document.getElementById("meritsDivAnim");
+
+    document.getElementById("educationH2").onclick = function () {
+      if (div1.style.display === "block") {
+        div1.style.display = "none";
+      } else {
+        div1.style.display = "block";
+      }
+    };
+    document.getElementById("workH2").onclick = function () {
+      if (div2.style.display === "block") {
+        div2.style.display = "none";
+      } else {
+        div2.style.display = "block";
+      }
+    };
+    document.getElementById("meritsH2").onclick = function () {
+      if (div3.style.display === "block") {
+        div3.style.display = "none";
+      } else {
+        div3.style.display = "block";
+      }
+    };
     console.log("async function");
   } else {
     console.log("HTTP-Error: " + response.status);

@@ -22,7 +22,7 @@ header {
 
   text-align: left;
   color: white;
-  font-family: "Quicksand", Calibri, "Gill Sans", sans-serif;
+  font-family: "Quicksand", "Calibri", "Gill Sans", sans-serif;
 }
 
 .header {
@@ -42,7 +42,7 @@ header {
 
 nav {
   background-color: black;
-  font-family: "Bebas Neue", Calibri, "Gill Sans", sans-serif;
+  font-family: "Bebas Neue", "Calibri", "Gill Sans", sans-serif;
 }
 
 .wrap {
@@ -89,7 +89,7 @@ header a:visited,
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 80vh;
 }
 
 .wrap-resume {
@@ -109,8 +109,12 @@ header a:visited,
 #section1,
 #section2,
 #section3 {
-  padding: 2.5%;
   border-bottom: solid 5px black;
+}
+#section0,
+#section2,
+#section4 {
+  max-width: 45%;
 }
 
 section {
@@ -130,10 +134,24 @@ section {
   box-shadow: 25px 25px 50px black;
 }
 
+.wrap-resume h2 {
+  font-size: 5ch;
+  font-family: "Quicksand", "Calibri", "Gill Sans", sans-serif;
+}
+
+.wrap-resume h4 {
+  color: rgb(73, 73, 46);
+}
+
+.wrap-resume li {
+  color: rgb(124, 124, 32);
+}
+
 #img0,
 #img1,
 #img2 {
   display: block;
+  margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
   max-width: 125%;
@@ -146,6 +164,25 @@ section {
   align-items: center;
 }
 
+#educationH2:hover,
+#workH2:hover,
+#meritsH2:hover {
+  color: rgb(124, 124, 32);
+  transition: color 0.5s;
+  cursor: pointer;
+}
+
+#eduDivAnim {
+  display: none;
+}
+
+#workDivAnim {
+  display: none;
+}
+
+#meritsDivAnim {
+  display: none;
+}
 /*===============Modal===============*/
 
 .read-more {
@@ -258,5 +295,10 @@ footer {
   #section0,
   #section2 {
     border-bottom: none;
+  }
+  #section0,
+  #section2,
+  #section4 {
+    max-width: 0;
   }
 }
