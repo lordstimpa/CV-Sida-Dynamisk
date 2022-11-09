@@ -91,21 +91,13 @@ header a:visited,
   min-height: 80vh;
 }
 
-.wrap-portfolio {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 5%;
-}
-
-.main-portfolio h2 {
-  font-size: 4ch;
-  font-family: "Quicksand", "Calibri", "Gill Sans", sans-serif;
-}
-
 section {
   width: 45%;
   padding: 5% 0 5% 0;
+}
+
+.main-text {
+  margin-left: 10%;
 }
 
 .steven {
@@ -117,13 +109,39 @@ section {
 
 .website {
   max-width: 100%;
-  box-shadow: 25px 25px 50px black;
+  border: 2px solid black;
+  border-radius: 5px;
 }
 
-.main-text h2 {
+/*===============Portfolio===============*/
+
+.main-portfolio {
+  width: 50%;
+  padding: 5% 0 5% 0;
+}
+
+.timePortfolio {
+  flex: 0 0 70%;
+  border-bottom: 5px solid black;
+}
+
+.main-text h2,
+.timePortfolio h2 {
   font-family: "Quicksand", "Calibri", "Gill Sans", sans-serif;
   font-size: 4ch;
   color: rgb(124, 124, 32);
+}
+
+.wrap-portfolio {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5%;
+}
+
+.main-portfolio h3 {
+  font-size: 3ch;
+  font-family: "Quicksand", "Calibri", "Gill Sans", sans-serif;
 }
 
 /*===============Resumé===============*/
@@ -132,6 +150,8 @@ section {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  width: 80%;
+  margin: auto;
 }
 
 #section0,
@@ -144,7 +164,13 @@ section {
 #section0,
 #section2,
 #section4 {
-  max-width: 45%;
+  width: 25%;
+}
+
+#section1,
+#section3,
+#section5 {
+  width: 75%;
 }
 
 .wrap-resume h2 {
@@ -165,9 +191,9 @@ section {
 #img2 {
   display: block;
   margin-top: 20px;
-  margin-left: auto;
+  margin-left: 0;
   margin-right: auto;
-  max-width: 125%;
+  max-width: 50%;
 }
 
 .wrap-img {
@@ -185,17 +211,12 @@ section {
   cursor: pointer;
 }
 
-#eduDivAnim {
-  display: none;
-}
-
-#workDivAnim {
-  display: none;
-}
-
+#eduDivAnim,
+#workDivAnim,
 #meritsDivAnim {
   display: none;
 }
+
 /*===============Contact===============*/
 
 .formContainer {
@@ -261,6 +282,7 @@ section {
 .mail {
   max-width: 100%;
   width: 75%;
+  border-radius: 20px;
 }
 
 .sectionMail {
@@ -270,24 +292,34 @@ section {
 /*===============Modal===============*/
 
 .read-more {
+  margin: auto;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  width: 250px;
+}
+
+.read-more img {
+  max-width: 100px;
+  max-height: 16px;
+  background-color: white;
 }
 
 .read-more a {
   text-decoration: none;
-  background-color: black;
   padding: 15px;
+  border: 2px solid black;
   border-radius: 3px;
   text-transform: uppercase;
-  color: white;
+  color: black;
 }
 
 #modal-first,
 #modal-second,
 #modal-third,
-#modal-fourth {
+#modal-fourth,
+#modal-fifth,
+#modal-sixth {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -305,7 +337,9 @@ section {
 #modal-first:target,
 #modal-second:target,
 #modal-third:target,
-#modal-fourth:target {
+#modal-fourth:target,
+#modal-fifth:target,
+#modal-sixth:target {
   visibility: visible;
   opacity: 1;
 }
@@ -313,7 +347,9 @@ section {
 .modal-content-1,
 .modal-content-2,
 .modal-content-3,
-.modal-content-4 {
+.modal-content-4,
+.modal-content-5,
+.modal-content-6 {
   position: relative;
   background: #fff;
   width: 500px;
@@ -374,11 +410,19 @@ footer {
   .wrap-resume h2 {
     font-size: 3.5ch;
   }
+
+  .read-more {
+    width: 45%;
+  }
 }
 
 @media (max-width: 900px) {
   section {
     flex: 0 0 90%;
+  }
+  .timePortfolio {
+    flex: 0 0 90%;
+    border-bottom: 5px solid black;
   }
   #section0,
   #section2 {
@@ -391,5 +435,16 @@ footer {
   }
   .mail {
     display: none;
+  }
+  .main-text {
+    margin-left: 0;
+  }
+
+  .wrap-resume section {
+    flex: 0 0 90%;
+  }
+
+  .wrap-resume {
+    width: 100%;
   }
 }

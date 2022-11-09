@@ -1,7 +1,7 @@
-let url = "script/cv.json";
+let urlResume = "script/cv.json";
 
-async function getData() {
-  let response = await fetch(url);
+async function getDataResume() {
+  let response = await fetch(urlResume);
 
   if (response.ok) {
     let data = await response.json();
@@ -238,4 +238,34 @@ async function getData() {
   }
 }
 
-getData();
+let urlPortfolio = "/script/project-img.json";
+// let urlPortfolio = "http://api.github.com/users/lordstimpa/repos";
+
+async function getDataPortfolio() {
+  let response = await fetch(urlPortfolio);
+
+  if (response.ok) {
+    let data = await response.json();
+
+    console.log(data);
+
+    let pigImg = document.getElementById("pig-game");
+    let rockImg = document.getElementById("rock-paper-scissors");
+    let img1 = document.createElement("img");
+    img1.setAttribute("class", "website");
+    img1.src = data[0].src;
+    let img2 = document.createElement("img");
+    img2.setAttribute("class", "website");
+    img2.src = data[1].src;
+
+    pigImg.appendChild(img1);
+    rockImg.appendChild(img2);
+
+    console.log("async function");
+  } else {
+    console.log("HTTP-Error: " + response.status);
+  }
+}
+
+getDataPortfolio();
+getDataResume();
