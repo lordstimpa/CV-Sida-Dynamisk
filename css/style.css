@@ -116,8 +116,12 @@ section {
 /*===============Portfolio===============*/
 
 .main-portfolio {
-  width: 50%;
-  padding: 5% 0 5% 0;
+  width: 55%;
+  padding: 5px;
+}
+
+.main-portfolio:last-of-type {
+  margin-bottom: 50px;
 }
 
 .timePortfolio {
@@ -136,7 +140,6 @@ section {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 5%;
 }
 
 .main-portfolio h3 {
