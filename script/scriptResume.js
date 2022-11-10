@@ -35,19 +35,19 @@ async function getDataResume() {
     // 3 sections for img
     let img0 = document.createElement("img");
     img0.setAttribute("id", "img0");
-    img0.src = "/img/hatt.png";
+    img0.src = "./img/hatt.png";
     let src = document.getElementById("section0");
     src.appendChild(img0);
 
     let img1 = document.createElement("img");
     img1.setAttribute("id", "img1");
-    img1.src = "/img/bag.png";
+    img1.src = "./img/bag.png";
     let src1 = document.getElementById("section2");
     src1.appendChild(img1);
 
     let img2 = document.createElement("img");
     img2.setAttribute("id", "img2");
-    img2.src = "/img/medal.png";
+    img2.src = "./img/medal.png";
     let src2 = document.getElementById("section4");
     src2.appendChild(img2);
 
