@@ -1,9 +1,23 @@
 let urlResume = "script/cv.json";
+const loader = document.querySelector("#loading");
+
+function displayLoading() {
+  loader.classList.add("display");
+  setTimeout(() => {
+    loader.classList.remove("display");
+  }, 3000);
+}
+
+function hideLoading() {
+  loader.classList.remove("display");
+}
 
 async function getDataResume() {
+  displayLoading();
   let response = await fetch(urlResume);
 
   if (response.ok) {
+    hideLoading();
     let data = await response.json();
 
     console.log(data);
@@ -238,32 +252,42 @@ async function getDataResume() {
   }
 }
 
-let urlPortfolio = "/script/project-img.json";
-// let urlPortfolio = "http://api.github.com/users/lordstimpa/repos";
+let urlPortfolioImg = "/script/project-img.json";
+let urlPortfolioGit = "http://api.github.com/users/lordstimpa/repos";
 
 async function getDataPortfolio() {
-  let response = await fetch(urlPortfolio);
+  let response = await fetch(urlPortfolioImg);
+  let response2 = await fetch(urlPortfolioGit);
 
-  if (response.ok) {
-    let data = await response.json();
+  if (response.ok && response2.ok) {
+    let dataImg = await response.json();
+    let dataGit = await response2.json();
 
-    console.log(data);
+    // Log JSON data in console
+    console.log(dataImg);
+    console.log(dataGit);
+
+    let rockImg = document.getElementById("rock-paper-scissors");
+    let rockGit = document.getElementById("rockGit");
 
     let pigImg = document.getElementById("pig-game");
-    let rockImg = document.getElementById("rock-paper-scissors");
+    let pigGit = document.getElementById("pigGit");
+
     let img1 = document.createElement("img");
     img1.setAttribute("class", "website");
-    img1.src = data[0].src;
+    img1.src = dataImg[0].src;
+    pigImg.appendChild(img1);
+    pigGit.href = dataGit[4].html_url;
+
     let img2 = document.createElement("img");
     img2.setAttribute("class", "website");
-    img2.src = data[1].src;
-
-    pigImg.appendChild(img1);
+    img2.src = dataImg[1].src;
     rockImg.appendChild(img2);
+    rockGit.href = dataGit[6].html_url;
 
     console.log("async function");
   } else {
-    console.log("HTTP-Error: " + response.status);
+    console.log("HTTP-Error:" + response.status + response2.status);
   }
 }
 
