@@ -1,5 +1,5 @@
-let urlPortfolioImg = "/script/project-img.json";
-let urlPortfolioGit = "http://api.github.com/users/lordstimpa/repos";
+let urlPortfolioImg = "./script/project-img.json";
+let urlPortfolioGit = "https://api.github.com/users/lordstimpa/repos";
 
 async function getDataPortfolio() {
   let response = await fetch(urlPortfolioImg);
