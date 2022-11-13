@@ -147,6 +147,14 @@ section {
   font-family: "Quicksand", "Calibri", "Gill Sans", sans-serif;
 }
 
+#pigTitle,
+#rockTitle {
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
 /*===============Resumé===============*/
 
 .wrap-resume {
@@ -297,7 +305,6 @@ section {
 
 footer {
   display: flex;
-  flex: wrap;
   justify-content: space-evenly;
   padding: 50px 50px 50px 0;
   background-color: black;
